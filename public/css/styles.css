@@ -1,0 +1,45 @@
+html {
+    font-size: 1rem;
+    font-weight: 300;
+    margin-top: 0;
+    line-height: 1.77rem;
+    font-family:sans-serif;
+}
+
+body {
+    margin:0;
+}
+
+a {
+    text-decoration:none;
+}
+
+.nav-bar {
+    height:80px;
+    color:white;
+    background-color:#ee6161;
+}
+
+.nav-bar a {
+    color:white;
+}
+
+.nav-bar a:hover {
+    text-decoration:underline;
+}
+
+.nav-bar ul {
+    display:block;
+    margin:auto auto;
+    padding:25px 0;
+}
+
+.nav-bar ul li {
+    display: inline-block;
+    padding:0 20px;
+}
+
+.site-title {
+    font-weight:bold;
+    font-size:2rem;
+}

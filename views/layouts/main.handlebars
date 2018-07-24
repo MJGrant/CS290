@@ -3,18 +3,21 @@
 <head>
     <title>Toddler Book Reviews</title>
     <link rel="stylesheet" href="css/styles.css">
+    <script src="js/scripts.js"></script>
 </head>
 <body>
     <!-- nav bar -->
     <div class="nav-bar">
         <ul>
-        <li><span class="site-title">Toddler Book Reviews</span></li>
-        <li><a href="">About Us</a></li>
-        <li><a href="">Contact</a></li>
-        <li><a href="">Get the list!</a></li>
+        <li><span class="site-title"><a href="/">Toddler Book Reviews</a></span></li>
+        <li><a href="/about" id="link-about">About Us</a></li>
+        <li><a href="/contact" id="link-contact">Contact</a></li>
+        <li><a href="/download" id="link-download">Get the list!</a></li>
         </ul>
     </div>
     <!-- display each page's content in here, without re-rendering the nav bar -->
+    <div class="page-body">
     {{{body}}}
+    </div>
 </body>
 </html>

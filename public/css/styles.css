@@ -10,6 +10,11 @@ body {
     margin:0;
 }
 
+.page-body {
+    width:80%;
+    margin: 20px auto;
+}
+
 a {
     text-decoration:none;
 }
@@ -42,4 +47,51 @@ a {
 .site-title {
     font-weight:bold;
     font-size:2rem;
+}
+
+/* Contact form styles */
+.contact-form {
+    margin:10px auto;
+    max-width: 500px;
+    padding: 20px 12px;
+}
+
+.contact-form input {
+    height:30px;
+    font-size:1rem;
+}
+
+.contact-form li {
+    padding: 0;
+    display: block;
+    list-style: none;
+    margin: 10px 0 0 0;
+}
+
+.contact-form label {
+    margin:0 0 3px 0;
+    padding:0px;
+    display:block;
+    font-weight: bold;
+}
+
+.contact-form li {
+    list-style:none;
+}
+
+.contact-form .full-width {
+    width: 100%;
+}
+
+.contact-form .textinput {
+    height: 100px;
+}
+
+.contact-form .required{
+    color:red;
+}
+
+.disclaimer-text {
+    font-size:.8em;
+    font-style:italic;
 }

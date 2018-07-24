@@ -17,7 +17,29 @@ app.set('view engine', 'handlebars');
 app.set('port', process.argv[2]);
 
 app.get('/',function(request, response) {
-    response.render('index');
+    var date = {};
+
+    //get the current month and year so homepage always looks current
+    var dateObject = new Date();
+    var currentMonth = dateObject.getMonth();
+    var monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    date.month = monthNames[currentMonth];
+
+    var currentYear = dateObject.getFullYear();
+    date.year = currentYear;
+    response.render('index', date);
+});
+
+app.get('/about',function(request, response) {
+    response.render('about');
+});
+
+app.get('/contact',function(request, response) {
+    response.render('contact');
+});
+
+app.get('/download',function(request, response) {
+    response.render('download');
 });
 
 //error response pages

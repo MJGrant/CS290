@@ -110,3 +110,13 @@ a {
     font-size:2em;
     color:gold;
 }
+
+.amazon-link-button {
+    background-color:gold;
+    color:black;
+    border: none;
+    padding: 12px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}

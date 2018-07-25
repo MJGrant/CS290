@@ -95,3 +95,18 @@ a {
     font-size:.8em;
     font-style:italic;
 }
+
+.book-cover img {
+    display:block;
+    width:300px;
+}
+
+.quick-ratings li {
+    list-style:none;
+    text-align:center;
+}
+
+.star {
+    font-size:2em;
+    color:gold;
+}

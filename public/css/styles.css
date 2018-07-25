@@ -3,62 +3,67 @@ html {
     font-weight: 300;
     margin-top: 0;
     line-height: 1.77rem;
-    font-family:sans-serif;
+    font-family: sans-serif;
+    text-align: center;
 }
 
 body {
-    margin:0;
+    margin: 0;
+}
+
+h1 {
+    margin-top: 40px;
 }
 
 .page-body {
-    width:80%;
+    width: 60%;
     margin: 20px auto;
 }
 
 a {
-    text-decoration:none;
+    text-decoration: none;
 }
 
 .nav-bar {
-    height:80px;
-    color:white;
-    background-color:#ee6161;
+    height: 80px;
+    color: white;
+    background-color: #ee6161;
 }
 
 .nav-bar a {
-    color:white;
+    color: white;
 }
 
 .nav-bar a:hover {
-    text-decoration:underline;
+    text-decoration: underline;
 }
 
 .nav-bar ul {
-    display:block;
-    margin:auto auto;
-    padding:25px 0;
+    display: block;
+    margin: auto auto;
+    padding: 25px 0;
 }
 
 .nav-bar ul li {
     display: inline-block;
-    padding:0 20px;
+    padding: 0 20px;
 }
 
 .site-title {
-    font-weight:bold;
-    font-size:2rem;
+    font-weight: bold;
+    font-size: 2rem;
 }
 
 /* Contact form styles */
 .contact-form {
-    margin:10px auto;
+    margin: 10px auto;
     max-width: 500px;
     padding: 20px 12px;
 }
 
 .contact-form input {
-    height:30px;
-    font-size:1rem;
+    height: 30px;
+    font-size: 1rem;
 }
 
 .contact-form li {
@@ -69,14 +74,14 @@ a {
 }
 
 .contact-form label {
-    margin:0 0 3px 0;
-    padding:0px;
-    display:block;
+    margin: 0 0 3px 0;
+    padding: 0px;
+    display: block;
     font-weight: bold;
 }
 
 .contact-form li {
-    list-style:none;
+    list-style: none;
 }
 
 .contact-form .full-width {
@@ -88,22 +93,22 @@ a {
 }
 
 .contact-form .required{
-    color:red;
+    color: red;
 }
 
 .disclaimer-text {
-    font-size:.8em;
-    font-style:italic;
+    font-size: .8em;
+    font-style: italic;
 }
 
 .book-cover img {
-    display:block;
-    width:300px;
+    display: block;
+    width: 300px;
 }
 
 .quick-ratings li {
-    list-style:none;
-    text-align:center;
+    list-style: none;
+    text-align: center;
 }
 
 .review-table {
@@ -111,18 +116,39 @@ a {
 }
 
 .star {
-    font-size:2em;
-    color:gold;
+    font-size: 2em;
+    color: gold;
 }
 
 .amazon-link-button {
-    background-color:gold;
-    color:black;
+    background-color: gold;
+    color: black;
     border: none;
     padding: 12px 30px;
     text-align: center;
     text-decoration: none;
     display: block;
-    width:340px;
+    width: 340px;
     margin: 0 auto;
+}
+
+li, p {
+    text-align: left;
+}
+
+@media screen and (max-width: 768px) {
+    .star {
+        font-size: 1.2em;
+        color: gold;
+    }
+
+    .page-body {
+        width:90%
+    }
+
+    .carousel {
+        position: relative;
+        width:100%;
+        margin: 0 auto;
+    }
 }

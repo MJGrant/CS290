@@ -132,8 +132,37 @@ a {
     margin: 0 auto;
 }
 
+.download-link-button {
+    background-color: #40efa9;
+    color: black;
+    border: none;
+    padding: 12px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    width: 340px;
+    margin: 0 auto;
+}
+
+.preview-image {
+    width: 80%;
+    display: block;
+    margin: 0 auto;
+}
+
 .image-credit {
     font-size: .7em;
+}
+
+.privacy-scrollbox {
+    height: 400px;
+    overflow: scroll;
+}
+
+footer {
+    height: 80px;
+    background-color: #efefef;
+    text-align:center;
 }
 
 li, p {

@@ -42,6 +42,10 @@ app.get('/download',function(request, response) {
     response.render('download');
 });
 
+app.get('/privacy',function(request, response) {
+    response.render('privacy');
+});
+
 //error response pages
 app.use(function(req,res){
   res.status(404);

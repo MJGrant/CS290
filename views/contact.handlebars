@@ -1,22 +1,24 @@
 Toddler Book Reviews strives to be honest and independent. We'd love to hear from you!
-<form action="mailto:granaman@oregonstate.edu" method="post" enctype="text/plain">
+<script src="js/contact.js"></script>
+
+<form>
 <ul class="contact-form">
     <!-- name -->
     <li>
         <label>Your name <span class="required">*</span></label>
-        <input type="text" name="field1" class="full-width" placeholder="First and last"/>
+        <input type="text" name="yourName" class="full-width" id="contact-form-from" placeholder="First and last"/>
     </li>
 
     <!-- email -->
     <li>
         <label>Email <span class="required">*</span></label>
-        <input type="email" name="field3" class="full-width" placeholder="you@sample.com"/>
+        <input type="email" name="email" class="full-width" id="contact-form-email" placeholder="you@sample.com"/>
     </li>
 
     <!-- topic -->
     <li>
         <label>Subject</label>
-        <select name="field4" class="full-width">
+        <select name="subject" class="full-width" id="contact-form-subject">
         <option value="Feedback">Feedback and questions</option>
         <option value="Partnership">Partnership opportunities</option>
         <option value="Author inquiries">Author inquiriers</option>
@@ -27,13 +29,15 @@ Toddler Book Reviews strives to be honest and independent. We'd love to hear fro
     <li>
         <label>Your Message <span class="required">*</span></label>
         <span class="disclaimer-text">Please note that we cannot accept "samples" or "freebies" in exchange for positive reviews.</span>
-        <textarea name="field5" id="field5" class="full-width textinput"></textarea>
+        <textarea name="text" id="contact-form-text" class="full-width textinput"></textarea>
     </li>
 
     <!-- submit button -->
     <li>
-        <input type="submit" value="Submit" />
+        <button id="button-contact-form-submit">Submit</button>
     </li>
+
+    {{emailRes}}
 </ul>
 </form>
 

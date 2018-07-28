@@ -162,6 +162,8 @@ a {
 .privacy-scrollbox {
     height: 400px;
     overflow: scroll;
+    border:1px solid grey;
+    padding:20px;
 }
 
 footer {

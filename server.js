@@ -38,11 +38,9 @@ app.get('/contact',function(request, response) {
 
 /* nodemailer.com/about helped a lot with configuring this */
 app.post('/contact', function(request, response) {
-    var responseObj = {};
     // Generate test SMTP service account from ethereal.email
     //this means the mail doesn't actually get delivered to my email addreess
-    //but it can be viewed by going to:
-    //https://ethereal.email/message/MSGIDHERE (see server console for message id)
+    //but it can be viewed by going to the ethereal URL that is generated
     nodemailer.createTestAccount(function(err, account) {
         // create reusable transporter object using the default SMTP transport
         var transporter = nodemailer.createTransport({
@@ -61,6 +59,7 @@ app.post('/contact', function(request, response) {
                 console.log(error);
                 response.json({yo: 'error'});
                 responseObj.emailRes = "Error! Message not sent!";
+                response.status(500, error);
             } else {
                 console.log('Message sent: ' + info.response);
                 response.json({yo: info.response});
@@ -68,17 +67,14 @@ app.post('/contact', function(request, response) {
             }
         });
     });
-
-    //reload the contact page
-    response.render('contact', responseObj);
 });
 
 app.get('/download',function(request, response) {
-    response.render('download', pageData);
+    response.render('download');
 });
 
 app.get('/privacy',function(request, response) {
-    response.render('privacy', pageData);
+    response.render('privacy');
 });
 
 //error response pages
@@ -93,10 +89,6 @@ app.use(function(err, req, res, next){
   res.status(500);
   res.render('500');
 });
-
-var sendEmail = function() {
-    console.log("sent email!");
-};
 
 //start server
 app.listen(app.get('port'), function(){

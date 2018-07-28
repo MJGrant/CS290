@@ -16,12 +16,20 @@ function bindButtons() {
 
         //this will run when the server responds
         req.addEventListener('load', function() {
+            var responseID;
+            var messageSpan = document.getElementById('email-submission-response');
             if (req.status >= 200 && req.status < 400) {
                 var response = JSON.parse(req.responseText);
-                console.log(response);
+                console.log("response id:", response.yo.match(/[A-Za-z0-9]{15,}/)[0]);
+                responseID = response.yo.match(/[A-Za-z0-9\-.]{15,}/)[0];
+                document.getElementById('email-submission-response').innerHTML = 'Message Sent!</br>View it by <a href="https://ethereal.email/message/' + responseID + '">clicking here</a>.';
+                document.getElementById("contact-us-form").reset();
             } else {
                 console.log("Error in network request: " + req.statusText);
+                responseID = "Error in network request.";
+                document.getElementById('email-submission-response').innerHTML = 'Error in network request. Please try again.';
             }
+
         });
         //send off the data the user entered
         req.send(JSON.stringify(payload));

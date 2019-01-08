@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+        <meta charset="UTF-8">
+        <title>Activity: AJAX Interactions (granaman)</title>
+  </head>
+  <body>
+    <h3>Form 1 - Get weather for a city or zipcode with Open Weather Map</h3>
+    <form>
+      <fieldset>
+        <legend>Enter a US city or zipcode</legend>
+        <input type="text" name="userInput" id="userInput">
+        <button id="zipcodeSubmit">Submit</button>
+        <span id="badInputDisplay" style="color:red"></span>
+      </fieldset>
+    </form>
+    </br>
+    <div>
+        Weather for <span id="userInputDisplay">(enter your city or zipcode)</span>
+      <ul>
+        <li><span>Temperature: </span><span id="tempDisplay"></span></li>
+        <li><span>Humidity: </span><span id="humidityDisplay"></span></li>
+        <li><span>Conditions: </span><span id="conditionsDisplay"></span></li>
+      </ul>
+    </div>
+
+    <h3>Form 2 - Submit input to http://httpbin.org/post and display response</h3>
+    <form>
+      <fieldset>
+        <legend>Enter something to post</legend>
+        <input type="text" name="form2input" id="form2input">
+        <button id="form2Submit">Submit</button>
+      </fieldset>
+    </form>
+    </br>
+    <div>
+        response.data: <span id="responseData"></span>
+    </div>
+
+  </body>
+  <script src="script.js"></script>
+</html>

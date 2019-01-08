@@ -1,0 +1,41 @@
+tbody td:nth-child(1) {
+    font-style:italic;
+}
+
+tbody tr:nth-of-type(odd) {
+    background-color:#ebe0cc;
+}
+
+tbody tr:nth-of-type(even) {
+    background-color:#fdf8ee;
+}
+
+.outer-content {
+    width:75%;
+    background-color:pink;
+    margin-top:20px;
+    padding:10px;
+    text-align:center;
+}
+
+.inner-content {
+    width:75%;
+    background-color:#ccdbeb;
+    margin:auto auto;
+
+}
+
+form {
+    border:1px solid black;
+}
+
+.form-input {
+    border:1px solid black;
+    margin:10px;
+    padding:10px;
+
+}
+
+.submit-button {
+    margin:10px 0;
+}

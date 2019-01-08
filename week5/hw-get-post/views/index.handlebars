@@ -1,0 +1,17 @@
+<h1>{{requestType}}</h1>
+{{#if params}}
+<table>
+    <thead>
+    <tr>
+        <th>Parameter name</th>
+        <th>Parameter value</th>
+    </tr>
+    </thead>
+  {{#each params}}
+    <tr>
+    <td>{{this.name}}</td>
+    <td>{{this.value}}</td>
+    </tr>
+  {{/each}}
+</table>
+{{/if}}

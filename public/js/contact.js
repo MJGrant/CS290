@@ -20,9 +20,13 @@ function bindButtons() {
             var messageSpan = document.getElementById('email-submission-response');
             if (req.status >= 200 && req.status < 400) {
                 var response = JSON.parse(req.responseText);
-                console.log("response id:", response.yo.match(/[A-Za-z0-9]{15,}/)[0]);
-                responseID = response.yo.match(/[A-Za-z0-9\-.]{15,}/)[0];
-                document.getElementById('email-submission-response').innerHTML = 'Message Sent!</br>View it by <a href="https://ethereal.email/message/' + responseID + '">clicking here</a>.';
+                if (response.yo.match(/[A-Za-z0-9\-.]{15,}/)) {
+                    console.log("response id:", response.yo.match(/[A-Za-z0-9]{15,}/)[0]);
+                    responseID = response.yo.match(/[A-Za-z0-9\-.]{15,}/)[0];
+                    document.getElementById('email-submission-response').innerHTML = 'Message Sent!</br>View it by <a href="https://ethereal.email/message/' + responseID + '">clicking here</a>.';
+                } else {
+                    document.getElementById('email-submission-response').innerHTML = 'Message Sent!</br>Failed to generate link.';
+                }
                 document.getElementById("contact-us-form").reset();
             } else {
                 console.log("Error in network request: " + req.statusText);

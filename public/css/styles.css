@@ -104,6 +104,7 @@ a {
 .disclaimer-text {
     font-size: .8em;
     font-style: italic;
+    line-height:1.3em;
 }
 
 .book-cover img {
